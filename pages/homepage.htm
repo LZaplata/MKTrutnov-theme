@@ -1,0 +1,35 @@
+url = "/"
+layout = "default"
+title = "Úvod"
+==
+<div class="container-fluid py-4" id="homepage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="main-event border border-4 border-green">
+
+                </div>
+            </div>
+
+            <div class="col-12">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% partial "homepage/banner" %}
+{% partial "homepage/crossroad" %}
+{% partial "homepage/partners" %}
+
+<div class="banner">
+    <img src="{{ 'assets/images/banners/homepage/01.jpg'|theme }}" alt="Banner" class="img-fluid h-sm-auto of-cover">
+</div>
+
+{% partial "homepage/contacts" %}
+
+<div class="banner">
+    <img src="{{ 'assets/images/banners/homepage/02.jpg'|theme }}" alt="Banner" class="img-fluid h-sm-auto of-cover">
+</div>
+
+{% partial "homepage/blog" %}

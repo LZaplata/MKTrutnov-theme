@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,300;0,500;1,200;1,300;1,500&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "~bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$enable-negative-margins:       true;
+
+$link-decoration:               none;
+
+$theme-colors: (
+    "green":                    #136f63,
+    "black":                    #2b2d42,
+    "yellow":                   #e0ca3c,
+    "gray":                     #edf2f4,
+    "white":                    #ffffff,
+);
+
+$font-sizes: (
+    15:                         0.9375rem,
+    16:                         1rem,
+    17:                         1.0625rem,
+    19:                         1.1875rem,
+    21:                         1.3125rem,
+    22:                         1.375rem,
+    50:                         3.125rem,
+);
+
+$font-weights: (
+    "extralight":               200,
+    "light":                    300,
+    "regular":                  400,
+    "medium":                   500,
+    "semibold":                 600,
+    "bold":                     700,
+);
+
+$font-family-archivo:           "Archivo", sans-serif;
+$font-family-source-serif:      "Source Serif Pro", sans-serif;
+$font-family-base:              $font-family-source-serif;
+$font-size-base:                map-get($font-sizes, 19);
+$font-weight-base:              map-get($font-weights, "light");
+$font-weight-bold:              map-get($font-weights, "bold");
+
+$border-radius:                 3.125rem;
+
+$headings-font-family:          $font-family-base;
+$headings-color:                map-get($theme-colors, "black");
+$headings-font-weight:          $font-weight-bold;
+
+$h1-font-size:                  map-get($font-sizes, 50);
+
+$body-color:                    map-get($theme-colors, "black");
+
+$btn-font-size:                 map-get($font-sizes, 21);
+$btn-border-radius:             $border-radius;
+$btn-font-weight:               map-get($font-weights, "light");
+$btn-focus-width:               0;
+$btn-border-width:              1px;
+//$btn-font-size-sm:              map-get($font-sizes, 13);
+//$btn-border-radius-sm:          $border-radius;
+$btn-padding-x:                 1.5rem;
+$btn-padding-y:                 .7rem;
+//$btn-padding-x-sm:              1.5rem;
+//$btn-padding-y-sm:              .7rem;
+
+$btn-close-focus-shadow:        none;
+
+//$input-bg:                      transparent;
+//$input-border-color:            map-get($theme-colors, "blue-light");
+//$input-border-radius:           $border-radius;
+//$input-border-width:            1px;
+//$input-placeholder-color:       map-get($theme-colors, "gray");
+//$input-focus-box-shadow:        none;
+//$input-padding-x:               $btn-padding-x;
+
+$nav-link-color:                map-get($theme-colors, "green");
+$nav-link-hover-color:          map-get($theme-colors, "black");
+$nav-link-font-size:            map-get($font-sizes, 17);
+$nav-link-font-weight:          map-get($font-weights, "regular");
+$nav-link-padding-x:            0;
+$nav-link-padding-y:            0;
+
+$nav-pills-link-active-color:   map-get($theme-colors, "black");
+$nav-pills-link-active-bg:      transparent;
+
+$offcanvas-bg-color:            map-get($theme-colors, "green");
+$offcanvas-color:               map-get($theme-colors, "white");
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "~bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+$utilities:
+(
+    "font-size": (
+        property: font-size,
+        class: fs,
+        values: $font-sizes,
+        rfs: true,
+    ),
+    "font-size-static": (
+        property: font-size,
+        class: fss,
+        values: $font-sizes,
+    ),
+    "font-weight": (
+        property: font-weight,
+        class: fw,
+        values: $font-weights,
+    ),
+    "font-family": (
+        property: font-family,
+        class: ff,
+        values: (
+            "archivo": $font-family-archivo,
+            "source-serif": $font-family-source-serif,
+        ),
+    ),
+    "background-color-hover": (
+        property: background-color,
+        class: bg,
+        values: map-loop($theme-colors, rgba-css-var, "$key", "bg"),
+        local-vars: (
+            bg-opacity: 1,
+        ),
+        state: hover,
+    ),
+    "color-hover": (
+        property: color,
+        class: text,
+        values: $theme-colors,
+        state: hover,
+    ),
+    "height": (
+        property: height,
+        class: h,
+        values: (
+            25: 25%,
+            50: 50%,
+            75: 75%,
+            100: 100%,
+            auto: auto
+        ),
+        responsive: true,
+    ),
+    "width": (
+        property: width,
+        class: w,
+        values: (
+            25: 25%,
+            50: 50%,
+            75: 75%,
+            100: 100%,
+            auto: auto
+        ),
+        responsive: true,
+    ),
+    "object-fit": (
+        property: object-fit,
+        class: of,
+        values: (
+            cover: cover,
+            contain: contain,
+            none: none,
+        ),
+        responsive: true,
+    ),
+    "transition": (
+        property: transition,
+        class: transition,
+        values: (
+            null: all var(--bs-transition-duration) var(--bs-transition-function)
+        ),
+        local-vars: (
+            transition-property: all,
+            transition-duration: .2s,
+            transition-function: ease-in-out
+        ),
+    )
+);
+
+// 5. Include remainder of required parts
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/offcanvas";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/alert";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "~bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+:root {
+    @each $size, $value in $font-sizes {
+        --#{$prefix}font-size-#{$size}: #{$value};
+    }
+
+    @each $weight, $value in $font-weights {
+        --#{$prefix}font-weight-#{$weight}: #{$value};
+    }
+};

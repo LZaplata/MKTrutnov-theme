@@ -1,0 +1,13 @@
+name: 'Městská knihovna Trutnov'
+description: 'Theme for Trutnov city library.'
+author: 'Lukáš Záplata'
+homepage: ''
+authorCode: LZaplata
+code: mktrutnov
+parent: ''
+database: '0'
+require:
+    - rainlab.pages
+    - rainlab.blog
+    - lzaplata.extensions
+    - initbiz.seostorm

@@ -1,0 +1,26 @@
+items:
+    -
+        title: Akce
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: events
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Služby
+        nesting: 1
+        type: static-page
+        code: ''
+        reference: sluzby
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Main Menu'
