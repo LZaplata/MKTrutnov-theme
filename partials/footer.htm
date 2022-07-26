@@ -6,7 +6,31 @@ code = "footer-menu"
         <div class="container-lg">
             <div class="row g-sm-5">
                 <div class="col-12 pb-4 col-sm-6 pb-sm-0 col-lg-4 col-xl-3">
-                    {% component "footerMenu" %}
+                    <nav class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a href="{{ '2022-Knihovni-rad.pdf'|media }}" target="_blank" class="nav-link text-center text-sm-start">
+                                Knihovní řád (PDF)
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ 'annual-reports'|page }}" class="nav-link text-center text-sm-start">
+                                Výroční zprávy
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ '2019-Prohlaseni-o-pristupnosti.pdf'|media }}" target="_blank" class="nav-link text-center text-sm-start">
+                                Prohlášení o přístupnosti (PDF)
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ 'gdpr'|page }}" target="_blank" class="nav-link text-center text-sm-start">
+                                Zpracování osobních údajů
+                            </a>
+                        </li>
+                    </nav>
                 </div>
 
                 <div class="border-1 border-start border-white col-12 col-sm-6 col-lg-4 col-xl-3">
