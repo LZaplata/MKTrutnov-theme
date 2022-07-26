@@ -1,0 +1,17 @@
+<div class="img overflow-hidden">
+    <img src="{{ 'assets/images/thumbs/0%s.jpg'|format(random(1, 9))|theme }}" alt="" class="img-fluid w-100">
+</div>
+
+<div class="bg-green p-4 p-xl-40">
+    <p class="h1 mb-2 text-white">
+        {{ event.title }}
+    </p>
+
+    <p class="mb-0 text-white fst-italic fw-medium fs-22">
+        {{ event.excerpt }}
+    </p>
+
+    <p class="mb-0">
+        <a href="{{ 'event'|page({"slug": event.slug}) }}" class="stretched-link"></a>
+    </p>
+</div>

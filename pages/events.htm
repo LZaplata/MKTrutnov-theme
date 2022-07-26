@@ -1,4 +1,45 @@
-title = "Akce"
-layout = "default"
 url = "/akce"
+layout = "default"
+title = "Akce"
+
+[collection events]
+handle = "Events\Event"
 ==
+<?php
+function onLoadMore()
+{
+    $this["pageNumber"] = Input::get("page");
+}
+?>
+==
+<div class="container-fluid py-5" id="events">
+    <div class="container-lg py-xl-4">
+        <div id="future-events">
+            <h2 class="h1 border-bottom border-9 border-green pb-3 mb-0">
+                Nadcházející akce
+            </h2>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                {% set futureEvents = events.whereDate("start_at", ">", "now"|date("Y-m-d")).where("highlighted", "!=", 1).orderBy("start_at", "asc").get() %}
+
+                {% for event in futureEvents %}
+                    {% partial "event/future" event=event %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h2 class="h1 border-bottom border-9 border-green pb-3 mb-0">
+                Proběhlé akce
+            </h2>
+
+            <div id="past-events" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                {% partial "events/past" %}
+            </div>
+
+            <div id="load-more">
+                {% partial "events/load-more" %}
+            </div>
+        </div>
+    </div>
+</div>

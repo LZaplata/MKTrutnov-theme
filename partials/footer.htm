@@ -1,47 +1,61 @@
 [staticMenu footerMenu]
 code = "footer-menu"
 ==
-<footer class="container-fluid py-5 bg-blue position-relative text-white fs-16">
-    <div class="container-lg">
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col order-1">
-                <img src="{{ 'assets/images/logo-footer.svg'|theme }}" alt="Logo">
-            </div>
+<footer>
+    <div class="container-fluid bg-green py-40" id="footer">
+        <div class="container-lg">
+            <div class="row g-sm-5">
+                <div class="col-12 pb-4 col-sm-6 pb-sm-0 col-lg-4 col-xl-3">
+                    {% component "footerMenu" %}
+                </div>
 
-            <div class="claim col order-2 order-md-3 text-uppercase fw-bold">
-                <p class="mb-md-4">
-                    pracujeme na nejvyšších místech
+                <div class="border-1 border-start border-white col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <nav class="nav flex-column border-1 border-top border-left border-white pt-4 pt-sm-0">
+                        <li class="nav-item">
+                            <a href="https://www.galeriedraka.cz/" target="_blank" class="nav-link text-center text-sm-start">
+                                Galerie Draka Trutnov
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="https://www.gamt.cz/Galerie-mesta-Trutnova.html" target="_blank" class="nav-link text-center text-sm-start">
+                                Galerie města Trutnova
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="http://uffo.cz/" target="_blank" class="nav-link text-center text-sm-start">
+                                UFFO
+                            </a>
+                        </li>
+                    </nav>
+                </div>
+
+                <div class="logo d-none d-lg-flex col-lg-4 justify-content-lg-end col-xl-6">
+                    <a href="{{ 'homepage'|page }}" class="d-block bg-white bg-yellow-hover transition"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-black py-4">
+        <div class="container-lg">
+            <div class="d-md-flex justify-content-md-between align-items-md-center">
+                <p class="mb-0 text-white ff-archivo fs-15 fw-medium text-center">
+                    <span class="d-block d-sm-inline-block">
+                        &copy; {{ "now"|date("Y") }}
+
+                        <span class="d-none d-sm-inline-block mx-sm-2">
+                            |
+                        </span>
+                    </span>
+
+                    Městská knihovna s regionálními<br class="d-sm-none"> funkcemi v Trutnově
                 </p>
-            </div>
 
-            <div class="address col order-3 order-md-5">
-                <p class="mb-4 mb-md-0">
-                    Alturas s.r.o. <br>
-                    Jablonecká 360/21 <br>
-                    190 00 Praha 9 <br>
-                    IČ: 071 75 981 <br>
-                    DIČ: CZ 071 75 981
+                <p class="mb-0 signature mt-4 d-flex justify-content-center mt-md-0">
+                    <a href="https://www.hucr.cz" target="_blank" class="d-block bg-white bg-white-hover transition"></a>
                 </p>
-            </div>
-
-            <div class="link col order-4 order-md-2 d-md-flex align-items-md-center">
-                <p class="mb-4 mb-md-0">
-                    <a href="{{ 'contact-us'|page }}" class="btn btn-blue-light btn-sm text-uppercase">
-                        kontaktujte nás
-                    </a>
-                </p>
-            </div>
-
-            <div class="phone col order-5 order-md-4">
-                <p class="mb-4">
-                    <a href="tel:+420 607 712 834" class="text-white text-blue-light-hover transition fw-bold">
-                        +420 607 712 834
-                    </a>
-                </p>
-            </div>
-
-            <div class="menu col order-5">
-                {% component "footerMenu" %}
             </div>
         </div>
     </div>

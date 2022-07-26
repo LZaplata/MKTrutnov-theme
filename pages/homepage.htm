@@ -1,35 +1,139 @@
 url = "/"
 layout = "default"
 title = "Úvod"
-==
-<div class="container-fluid py-4" id="homepage">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="main-event border border-4 border-green">
 
+[collection events]
+handle = "Events\Event"
+
+[staticMenu sideMenu]
+code = "regionalni-sluzby"
+==
+<div class="container-fluid mt-40 pb-5" id="homepage">
+    <div class="container-lg pb-xl-4">
+        <div class="row g-xl-40">
+            <div class="col-12 col-lg-8">
+                <div class="border-top border-9 border-green pt-22 position-relative" id="main-event">
+                    {% set mainEvent = events.where("highlighted", 1).first %}
+
+                    {% partial "event/main" event=mainEvent %}
+                </div>
+
+                <div class="mt-40" id="future-events">
+                    <p class="text-uppercase ff-archivo fw-bold text-green fs-21 d-flex align-items-center border-bottom border-9 border-green pb-2 mb-0">
+                        nadcházející akce <i class="bi bi-chevron-right fs-16 ms-2"></i>
+                    </p>
+
+                    <div class="row row-cols-1 row-cols-sm-2">
+                        {% set futureEvents = events.whereDate("start_at", ">", "now"|date("Y-m-d")).where("highlighted", 0).orderBy("start_at", "asc").paginate(4) %}
+
+                        {% for event in futureEvents %}
+                            {% partial "event/future" event=event %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="mt-4" id="past-events">
+                    <p class="text-uppercase ff-archivo fw-bold text-green fs-21 d-flex align-items-center border-bottom border-9 border-green pb-2 mb-0">
+                        proběhlé akce <i class="bi bi-chevron-right fs-16 ms-2"></i>
+                    </p>
+
+                    <div class="row row-cols-1 row-cols-sm-2">
+                        {% set pastEvents = events.whereDate("start_at", "<=", "now"|date("Y-m-d")).orderBy("start_at", "desc").paginate(4) %}
+
+                        {% for event in pastEvents %}
+                            {% partial "event/past" event=event %}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
 
-            <div class="col-12">
+            <div class="col-12 mt-4 col-lg-4 mt-lg-0 mt-xl-40">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-1">
+                    <div class="col">
+                        <div class="border-top border-9 border-green pt-22">
+                            <p class="mb-0 w-sm-75 w-md-auto">
+                                <a href="{{ 'open-hours'|page }}" class="position-relative d-flex align-items-center">
+                                    <img src="{{ 'assets/images/books/01.jpg'|theme }}" alt="Výpůjční doba" class="img-fluid">
 
+                                    <span class="position-absolute ps-4 text-white fw-semibold fs-35 lh-sm fst-italic">
+                                        <span>
+                                            Výpůjční
+                                        </span>
+
+                                        <span class="d-flex align-items-center">
+                                            doba <i class="bi bi-chevron-right fs-25 ms-2"></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </p>
+
+                            <nav class="nav">
+                                <li class="nav-item w-100">
+                                    <a href="https://trutnov.tritius.cz/" target="_blank" class="nav-link fs-21 fst-italic fw-semibold py-3">
+                                        Online katalog <i class="bi bi-chevron-right fs-15 ms-1"></i>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item w-100 border-top border-1 border-green">
+                                    <a href="https://trutnov.tritius.cz/login" target="_blank" class="nav-link fs-21 fst-italic fw-semibold py-3">
+                                        Osobní konto <i class="bi bi-chevron-right fs-15 ms-1"></i>
+                                    </a>
+                                </li>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="border-top border-9 border-green">
+                            <nav class="nav">
+                                <li class="nav-item w-100">
+                                    <a href="https://www.facebook.com/knihovnatrutnov/" target="_blank" class="nav-link fs-21 fst-italic fw-semibold py-3">
+                                        Naše knihovna na Facebooku <i class="bi bi-chevron-right fs-15 ms-1"></i>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item w-100 border-top border-1 border-green">
+                                    <a href="https://e-senior.czu.cz/" target="_blank" class="nav-link fs-21 fst-italic fw-semibold py-3">
+                                        E-senior - portál vzdělávání<br class="d-block d-sm-none d-xl-block d-xxl-none"> seniorů <i class="bi bi-chevron-right fs-15 ms-1"></i>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item w-100 border-top border-1 border-green">
+                                    <a href="https://www.ptejteseknihovny.cz/knihovny/mestska-knihovna-trutnov/novy-dotaz" target="_blank" class="nav-link fs-21 fst-italic fw-semibold py-3">
+                                        Ptejte se knihovny <i class="bi bi-chevron-right fs-15 ms-1"></i>
+                                    </a>
+                                </li>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="col mt-3">
+                        <p class="text-uppercase ff-archivo fw-bold fs-21 d-flex align-items-center border-bottom border-9 border-green pb-2 mb-0">
+                            regionální služby
+                        </p>
+
+                        {% component "sideMenu" %}
+                    </div>
+
+                    <div class="col col-sm-9 col-md">
+                        <div class="p-4 bg-gray position-relative">
+                            <p class="mb-4">
+                                <img src="{{ 'assets/images/kralovehradecky-kraj.svg'|theme }}"
+                                     alt="Realizováno za finanční podpory Královéhradeckého kraje"
+                                     class="img-fluid">
+                            </p>
+
+                            <p class="mb-0 fst-italic fw-semibold fs-22">
+                                Realizováno za finanční podpory Královéhradeckého kraje
+                            </p>
+
+                            <p class="mb-0">
+                                <a href="https://www.kr-kralovehradecky.cz/" target="_blank" class="stretched-link"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-{% partial "homepage/banner" %}
-{% partial "homepage/crossroad" %}
-{% partial "homepage/partners" %}
-
-<div class="banner">
-    <img src="{{ 'assets/images/banners/homepage/01.jpg'|theme }}" alt="Banner" class="img-fluid h-sm-auto of-cover">
-</div>
-
-{% partial "homepage/contacts" %}
-
-<div class="banner">
-    <img src="{{ 'assets/images/banners/homepage/02.jpg'|theme }}" alt="Banner" class="img-fluid h-sm-auto of-cover">
-</div>
-
-{% partial "homepage/blog" %}

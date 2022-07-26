@@ -4,7 +4,7 @@ items:
         nesting: null
         type: cms-page
         url: null
-        code: ''
+        code: events
         reference: events
         cmsPage: null
         replace: null
@@ -13,12 +13,83 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: Služby
-        nesting: 1
+        title: 'Pro školy'
+        nesting: 0
         type: static-page
+        url: null
         code: ''
         reference: sluzby
+        cmsPage: null
         replace: 0
+        viewBag:
+            isHidden: '1'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Regionální služby'
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: regionalni-sluzby-verejne-knihovny
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Veřejné knihovny'
+                nesting: 0
+                type: static-page
+                url: null
+                code: ''
+                reference: regionalni-sluzby-verejne-knihovny
+                cmsPage: null
+                replace: 0
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Online katalog výměnnýchh souborů'
+                type: url
+                url: 'https://trutnov.tritius.cz/library/ds/'
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Informace pro knihovny'
+                nesting: 0
+                type: static-page
+                code: ''
+                reference: regionalni-sluzby-informace-pro-knihovny
+                replace: 0
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Základní dokumenty'
+                nesting: 0
+                type: static-page
+                code: ''
+                reference: regionalni-sluzby-zakladni-dokumenty
+                replace: 0
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Výpůjční doba'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: open-hours
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''

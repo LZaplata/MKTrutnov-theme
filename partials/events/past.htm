@@ -1,0 +1,5 @@
+{% set pastEvents = events.whereDate("start_at", "<=", "now"|date("Y-m-d")).orderBy("start_at", "desc").paginate(6) %}
+
+{% for event in pastEvents %}
+    {% partial "event/past" event=event %}
+{% endfor %}

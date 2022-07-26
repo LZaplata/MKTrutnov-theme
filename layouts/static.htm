@@ -1,7 +1,18 @@
 [staticMenu menu]
 code = "main-menu"
 
+[staticPage]
+useContent = 1
+default = 1
+
 [seo]
+
+[staticMenu]
+code = "regionalni-sluzby"
+
+[childPages]
+
+[Files files]
 ==
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -25,7 +36,27 @@ code = "main-menu"
         {% partial "header" %}
 
         <main class="position-relative">
-            {% page %}
+            <div class="container-fluid py-5" id="static-page">
+                <div class="container-lg py-xl-4">
+                    <div class="row g-xl-40">
+                        <div class="col-12 col-xl-8">
+                            <h1 class="mb-4">
+                               {{ staticPage.title}}
+                            </h1>
+
+                            <div class="content">
+                                {{ staticPage.content|raw }}
+
+                                {% component "files" category=staticPage.title|slug %}
+                            </div>
+                        </div>
+
+                        <div class="d-none d-xl-block col-xl-4">
+                            {% component "staticMenu" code=staticPage.parent.title|slug %}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         {% partial "footer" %}
@@ -39,7 +70,5 @@ code = "main-menu"
             'assets/js/lg-thumbnail.min.js',
             'assets/js/theme.js',
         ]|theme }}"></script>
-
-        {% framework extras %}
     </body>
 </html>

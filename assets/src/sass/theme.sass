@@ -5,7 +5,7 @@ header
         li
             a
                 &.active
-                    text-underline-offset: 5px
+                    text-underline-offset: 7px
 
     #offcanvas
         .offcanvas-body
@@ -17,3 +17,168 @@ header
                             --bs-nav-link-font-size: var(--bs-font-size-22)
                             --bs-nav-pills-link-active-color: var(--bs-yellow)
                             text-decoration: none !important
+
+                    .submenu
+                        li
+                            .nav-link
+                                --bs-nav-link-font-size: var(--bs-font-size-19)
+
+    #logo
+        a
+            mask-image: url("../images/logo.svg")
+            -webkit-mask: url("../images/logo.svg")
+            width: 247px
+            height: 51px
+
+#homepage
+    #main-event
+        .img
+            img
+                transition: $transition-base
+
+                @include media-breakpoint-down(sm)
+                    height: 300px
+                    object-fit: cover
+
+        &:hover
+            .img
+                img
+                    transform: scale(1.05)
+
+    #future-events, #past-events
+        .event
+            &:first-child
+                & > div
+                    border-top: none !important
+
+            @include media-breakpoint-up(sm)
+                &:nth-child(2)
+                    & > div
+                        border-top: none !important
+
+#events
+    #future-events, #past-events
+        .event
+            &:first-child
+                & > div
+                    border-top: none !important
+
+            @include media-breakpoint-up(sm)
+                &:nth-child(2)
+                    & > div
+                        border-top: none !important
+
+            @include media-breakpoint-up(sm)
+                &:nth-child(3)
+                    & > div
+                        border-top: none !important
+
+#homepage, #events
+    .event
+        .date, h3
+            transition: $transition-base
+
+        .img
+            img
+                transition: $transition-base
+
+        &:hover
+            .date, h3
+                color: var(--bs-black) !important
+
+            .img
+                img
+                    transform: scale(1.05)
+
+#static-page, #event
+    .content
+        strong
+            font-weight: var(--bs-font-weight-bold)
+
+        a
+            --bs-link-color: var(--bs-green)
+            --bs-link-hover-color: var(--bs-black)
+            font-weight: var(--bs-font-weight-semibold)
+            text-decoration: underline
+            text-underline-offset: 3px
+
+        ul
+            margin-top: map-get($spacers, 4)
+            margin-bottom: map-get($spacers, 4)
+            padding-left: 0
+
+            li
+                list-style: none
+                padding-left: 20px
+                position: relative
+
+                &:not(:first-child)
+                    margin-top: 5px
+
+                &:before
+                    content: "\F285"
+                    font-family: bootstrap-icons
+                    color: var(--bs-green)
+                    position: absolute
+                    left: 0
+                    font-size: var(--bs-font-size-12)
+                    top: 6px
+
+        h2
+            font-size: var(--bs-font-size-22)
+
+        p
+            margin-bottom: map-get($spacers, 4)
+
+            & + h2
+                margin-top: map-get($spacers, 4)
+
+        .files
+            ul
+                li
+                    padding-left: 0
+
+                    &:before
+                        content: ""
+
+footer
+    #footer
+        .row
+            & > div
+                &.border-1
+                    @include media-breakpoint-only(xs)
+                        border: none !important
+
+                    & > nav
+                        @include media-breakpoint-up(sm)
+                            border: none !important
+
+        .nav
+            .nav-item
+                &:not(:first-child)
+                    margin-top: map-get($spacers, 2)
+
+                .nav-link
+                    --bs-nav-link-color: var(--bs-white)
+                    --bs-nav-link-font-weight: var(--bs-font-weight-medium)
+                    --bs-nav-link-font-size: var(--bs-font-size-15)
+                    --bs-nav-link-hover-color: var(--bs-yellow)
+                    --bs-nav-pills-link-active-color: var(--bs-yellow)
+                    font-family: $font-family-archivo
+
+        .logo
+            a
+                mask-image: url("../images/logo.svg")
+                -webkit-mask: url("../images/logo.svg")
+                width: 247px
+                height: 51px
+
+    .signature
+        a
+            mask-image: url("../images/signature.svg")
+            -webkit-mask: url("../images/signature.svg")
+            width: 85px
+            height: 25px
+
+            &:not(:hover)
+                opacity: .25

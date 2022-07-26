@@ -2,11 +2,27 @@
     {% if not item.viewBag.isHidden %}
         <li role="presentation" class="nav-item {{ item.viewBag.cssClass }}">
             {% if item.url %}
-                <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }} class="nav-link ff-source-serif {{ item.isActive ? 'active text-decoration-underline' : '' }} {{ item.isChildActive ? 'child-active' : '' }}">
+                <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }} class="nav-link ff-source-serif text-center d-none d-xl-block {{ item.isActive ? 'active text-decoration-underline' : '' }} {{ item.isChildActive ? 'active text-decoration-underline' : '' }}">
+                    {{ item.title }}
+                </a>
+
+                <a href="{% if item.items %}#{{ item.title|slug }}{% else %}{{ item.url }}{% endif %}"
+                    {{ item.viewBag.isExternal ? 'target="_blank"' }}
+                    {% if item.items %}data-bs-toggle="collapse"{% endif %}
+                    class="nav-link ff-source-serif text-center d-xl-none {{ item.isActive ? 'active text-decoration-underline' : '' }} {{ item.isChildActive ? 'child-active' : '' }}">
+
                     {{ item.title }}
                 </a>
             {% else %}
                 <span>{{ item.title }}</span>
+            {% endif %}
+
+            {% if item.items %}
+                <div class="collapse" id="{{ item.title|slug }}">
+                    <ul class="nav nav-pills flex-column gap-3 flex-xl-row gap-xl-5 align-items-center submenu my-3">
+                        {% partial __SELF__ ~ "::items" items=item.items %}
+                    </ul>
+                </div>
             {% endif %}
         </li>
     {% endif %}

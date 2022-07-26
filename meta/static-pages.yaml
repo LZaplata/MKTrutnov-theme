@@ -1,2 +1,6 @@
 static-pages:
     sluzby: {  }
+    regionalni-sluzby:
+        regionalni-sluzby-verejne-knihovny: {  }
+        regionalni-sluzby-informace-pro-knihovny: {  }
+        regionalni-sluzby-zakladni-dokumenty: {  }

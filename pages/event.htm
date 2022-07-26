@@ -1,0 +1,60 @@
+url = "/akce/detail/:slug"
+layout = "default"
+title = "Akce - detail"
+
+[section event]
+handle = "Events\Event"
+entrySlug = "{{ :slug }}"
+==
+<?php
+function onInit()
+{
+    $this["activeMenuItem"] = "events";
+}
+?>
+==
+<div class="container-fluid py-5" id="event">
+    <div class="container-lg py-xl-4">
+        <div class="row g-xl-40">
+            <div class="col-12">
+                <p class="date ff-archivo fs-15 mb-3">
+                    <span class="fw-medium text-uppercase">
+                        {% if event.start_at|date("Ymd") <= "now"|date("Ymd") %}
+                            proběhlá
+                        {% else %}
+                            nadcházející
+                        {% endif %}
+                    </span>
+
+                    <span class="fw-extralight ms-1">
+                        {{ event.start_at|date("j. n. Y") }}
+                    </span>
+                </p>
+
+                <h1 class="mb-4">
+                    {{ event.title }}
+                </h1>
+
+                <div class="excerpt fw-semibold fst-italic fs-22 mb-4">
+                    {{ event.excerpt }}
+                </div>
+
+                <div class="content">
+                    {{ event.content|raw }}
+                </div>
+            </div>
+
+            {% if event.images.count > 0 %}
+                <div class="col-12 mt-4">
+                    <div class="row row-cols-1 g-4 row-cols-sm-2 row-cols-lg-3" id="event-galleryy">
+                        {% for image in event.images %}
+                            <a href="{{ image.path }}" class="col">
+                                <img src="{{ image.thumb(420, 205, {"mode": "crop"}) }}" alt="{{ image.title }}" class="img-fluid">
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="event col">
+    <div class="py-4 border-top border-1 border-green position-relative">
+        <p class="date text-green fst-italic fs-30 fw-regular mb-0">
+            {{ event.start_at|date("j. n. Y") }} / {{ event.start_at|date("H:i") }}
+        </p>
+
+        <h3 class="mb-0 text-green fs-30">
+            {{ event.title }}
+        </h3>
+
+        <p class="mb-0">
+            <a href="{{ 'event'|page({"slug": event.slug}) }}" class="stretched-link"></a>
+        </p>
+    </div>
+</div>

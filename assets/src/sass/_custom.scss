@@ -17,12 +17,16 @@ $theme-colors: (
 );
 
 $font-sizes: (
+    12:                         .75rem,
     15:                         0.9375rem,
     16:                         1rem,
     17:                         1.0625rem,
     19:                         1.1875rem,
     21:                         1.3125rem,
     22:                         1.375rem,
+    25:                         1.5625rem,
+    30:                         1.875rem,
+    35:                         2.1875rem,
     50:                         3.125rem,
 );
 
@@ -33,6 +37,18 @@ $font-weights: (
     "medium":                   500,
     "semibold":                 600,
     "bold":                     700,
+);
+
+$spacer:                        1rem;
+$spacers: (
+    0:                          0,
+    1:                          $spacer * .25,
+    2:                          $spacer * .5,
+    3:                          $spacer,
+    4:                          $spacer * 1.5,
+    5:                          $spacer * 3,
+    22:                         $spacer * 1.375,
+    40:                         $spacer * 2.5,
 );
 
 $font-family-archivo:           "Archivo", sans-serif;
@@ -57,12 +73,8 @@ $btn-border-radius:             $border-radius;
 $btn-font-weight:               map-get($font-weights, "light");
 $btn-focus-width:               0;
 $btn-border-width:              1px;
-//$btn-font-size-sm:              map-get($font-sizes, 13);
-//$btn-border-radius-sm:          $border-radius;
 $btn-padding-x:                 1.5rem;
 $btn-padding-y:                 .7rem;
-//$btn-padding-x-sm:              1.5rem;
-//$btn-padding-y-sm:              .7rem;
 
 $btn-close-focus-shadow:        none;
 
@@ -199,6 +211,7 @@ $utilities:
 @import "~bootstrap/scss/close";
 @import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/transitions";
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "~bootstrap/scss/utilities/api";
@@ -213,3 +226,7 @@ $utilities:
         --#{$prefix}font-weight-#{$weight}: #{$value};
     }
 };
+
+.border-9 {
+    --bs-border-width: 9px;
+}

@@ -1,0 +1,50 @@
+items:
+    -
+        title: 'Knihovní řád (PDF)'
+        nesting: null
+        type: url
+        url: 'http://localhost81/hucr/mktrutnov.cz/storage/app/media/2022-Knihovni-rad.pdf'
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+    -
+        title: 'Výroční zprávy'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: annual-reports
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Prohlášení o přístupnosti (PDF)'
+        type: url
+        url: 'http://localhost81/hucr/mktrutnov.cz/storage/app/media/2019-Prohlaseni-o-pristupnosti.pdf'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+    -
+        title: 'Zpracování osobních údajů'
+        nesting: null
+        type: url
+        url: /
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Footer Menu'

@@ -1,0 +1,50 @@
+items:
+    -
+        title: 'Veřejné knihovny'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: regionalni-sluzby-verejne-knihovny
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Online katalog výměnných<br class="d-block d-sm-none"> souborů'
+        type: url
+        url: 'https://trutnov.tritius.cz/library/ds/'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+    -
+        title: 'Informace pro knihovny'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: regionalni-sluzby-informace-pro-knihovny
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Základní dokumenty'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: regionalni-sluzby-zakladni-dokumenty
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Regionální služby'

@@ -1,0 +1,23 @@
+{% set files = __SELF__.category.files %}
+
+{% if files %}
+    {% set content_types_icons = {
+        "application/pdf": "filetype-pdf"
+    } %}
+
+    <div class="files">
+        <h2>Soubory</h2>
+
+        <ul class="my-0">
+            {% for file in files %}
+                <li class="d-flex align-items-center">
+                    <i class="bi bi-{{content_types_icons[file.file.content_type]}} me-2"></i>
+
+                    <a href="{{ file.file.path }}" target="_blank">
+                        {{ file.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
