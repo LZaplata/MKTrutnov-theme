@@ -8,7 +8,6 @@ parent: ''
 database: '0'
 require:
     - rainlab.pages
-    - rainlab.blog
     - lzaplata.extensions
     - lzaplata.files
     - initbiz.seostorm
