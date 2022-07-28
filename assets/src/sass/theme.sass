@@ -18,6 +18,10 @@ header
                             --bs-nav-pills-link-active-color: var(--bs-yellow)
                             text-decoration: none !important
 
+                            &:not(.active)
+                                &:focus
+                                    color: var(--bs-white)
+
                     .submenu
                         li
                             .nav-link
