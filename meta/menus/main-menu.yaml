@@ -106,9 +106,22 @@ items:
             isExternal: '0'
     -
         title: Ceník
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: price-list
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kontakty
+        type: cms-page
+        code: ''
+        reference: contacts
         viewBag:
             isHidden: '0'
             cssClass: ''
