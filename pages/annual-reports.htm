@@ -1,5 +1,25 @@
 title = "Výroční zprávy"
 layout = "default"
 url = "/vyrocni-zpravy"
+
+[Files files]
+category = "vyrocni-zpravy"
 ==
-f
+<div class="container-fluid py-5" id="annual-reports">
+    <div class="container-lg py-xl-4">
+        <div class="col-xxl-10 offset-xxl-1">
+            <h1 class="mb-4 ">
+                Výroční zprávy
+            </h1>
+
+            <div class="content">
+                <p>
+                    Výroční zprávy knihovny od roku 2006 ve formátu pdf.
+                </p>
+
+                {% component "files" %}
+            </div>
+        </div>
+    </div>
+</div>
+
