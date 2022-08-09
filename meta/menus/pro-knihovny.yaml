@@ -3,10 +3,8 @@ items:
         title: 'Veřejné knihovny'
         nesting: 0
         type: static-page
-        url: null
         code: ''
-        reference: regionalni-sluzby-verejne-knihovny
-        cmsPage: null
+        reference: pro-knihovny-verejne-knihovny
         replace: 0
         viewBag:
             isHidden: '0'
@@ -14,9 +12,13 @@ items:
             isExternal: '0'
     -
         title: 'Online katalog výměnných<br class="d-block d-sm-none"> souborů'
+        nesting: null
         type: url
         url: 'https://trutnov.tritius.cz/library/ds/'
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -25,10 +27,8 @@ items:
         title: 'Informace pro knihovny'
         nesting: 0
         type: static-page
-        url: null
         code: ''
-        reference: regionalni-sluzby-informace-pro-knihovny
-        cmsPage: null
+        reference: pro-knihovny-informace-pro-knihovny
         replace: 0
         viewBag:
             isHidden: '0'
@@ -38,10 +38,8 @@ items:
         title: 'Základní dokumenty'
         nesting: 0
         type: static-page
-        url: null
         code: ''
-        reference: regionalni-sluzby-zakladni-dokumenty
-        cmsPage: null
+        reference: pro-knihovny-zakladni-dokumenty
         replace: 0
         viewBag:
             isHidden: '0'

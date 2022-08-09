@@ -1,0 +1,156 @@
+items:
+    -
+        title: Rezervace
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: sluzby-rezervace
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Odložení dokumentu z regálu'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: sluzby-odlozeni-dokumentu-z-regalu
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Meziknihovní výpůjční služba'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: sluzby-meziknihovni-vypujcni-sluzba
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Zvukové knihy pro nevidomé'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: sluzby-zvukove-knihy-pro-nevidome
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Audioknihy
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: sluzby-audioknihy
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'E-knihy Palmknihy'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: sluzby-e-knihy-palmknihy
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'E-knihy Flexibooks'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: sluzby-e-knihy-flexibooks
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Česká digitální knihovna'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: sluzby-ceska-digitalni-knihovna
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Codexis - právní program'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: sluzby-codexis-pravni-program
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Moje ID'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: sluzby-moje-id
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Stolní deskové hry'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: sluzby-stolni-deskove-hry
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Univerzita třetího věku'
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: sluzby-univerzita-tretiho-veku
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: Služby

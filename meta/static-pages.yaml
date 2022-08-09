@@ -1,6 +1,19 @@
 static-pages:
-    sluzby: {  }
-    regionalni-sluzby:
-        regionalni-sluzby-verejne-knihovny: {  }
-        regionalni-sluzby-informace-pro-knihovny: {  }
-        regionalni-sluzby-zakladni-dokumenty: {  }
+    pro-skoly: {  }
+    pro-knihovny:
+        pro-knihovny-verejne-knihovny: {  }
+        pro-knihovny-informace-pro-knihovny: {  }
+        pro-knihovny-zakladni-dokumenty: {  }
+    sluzby:
+        sluzby-rezervace: {  }
+        sluzby-odlozeni-dokumentu-z-regalu: {  }
+        sluzby-meziknihovni-vypujcni-sluzba: {  }
+        sluzby-zvukove-knihy-pro-nevidome: {  }
+        sluzby-audioknihy: {  }
+        sluzby-e-knihy-palmknihy: {  }
+        sluzby-e-knihy-flexibooks: {  }
+        sluzby-ceska-digitalni-knihovna: {  }
+        sluzby-codexis-pravni-program: {  }
+        sluzby-moje-id: {  }
+        sluzby-stolni-deskove-hry: {  }
+        sluzby-univerzita-tretiho-veku: {  }
