@@ -1,5 +1,4 @@
 static-pages:
-    pro-skoly: {  }
     pro-knihovny:
         pro-knihovny-verejne-knihovny: {  }
         pro-knihovny-informace-pro-knihovny: {  }

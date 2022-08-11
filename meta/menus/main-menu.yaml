@@ -173,8 +173,10 @@ items:
                 title: 'Univerzita třetího věku'
                 nesting: 0
                 type: static-page
+                url: null
                 code: ''
                 reference: sluzby-univerzita-tretiho-veku
+                cmsPage: null
                 replace: 0
                 viewBag:
                     isHidden: '0'
@@ -182,13 +184,9 @@ items:
                     isExternal: '0'
     -
         title: 'Pro školy'
-        nesting: 0
-        type: static-page
-        url: null
+        type: cms-page
         code: ''
-        reference: pro-skoly
-        cmsPage: null
-        replace: 0
+        reference: for-schools
         viewBag:
             isHidden: '0'
             cssClass: ''
