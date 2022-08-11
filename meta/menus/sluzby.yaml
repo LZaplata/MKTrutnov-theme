@@ -104,19 +104,6 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: 'Codexis - právní program'
-        nesting: 0
-        type: static-page
-        url: null
-        code: ''
-        reference: sluzby-codexis-pravni-program
-        cmsPage: null
-        replace: 0
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
         title: 'Moje ID'
         nesting: 0
         type: static-page
@@ -146,8 +133,10 @@ items:
         title: 'Univerzita třetího věku'
         nesting: 0
         type: static-page
+        url: null
         code: ''
         reference: sluzby-univerzita-tretiho-veku
+        cmsPage: null
         replace: 0
         viewBag:
             isHidden: '0'
