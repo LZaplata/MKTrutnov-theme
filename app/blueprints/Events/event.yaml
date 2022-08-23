@@ -1,0 +1,74 @@
+uuid: ad07c934-8af9-4bc0-86d3-dac558f6cbb9
+handle: Events\Event
+type: stream
+name: Akce
+
+primaryNavigation:
+    label: Akce
+    icon: icon-calendar
+    order: 10
+
+navigation:
+    label: Akce
+    icon: icon-list
+    parent: Events\Event
+    order: 10
+
+columns:
+    recordsPerPage: 1
+
+fields:
+    start_at:
+        label: Datum konání
+        commentAbove: Jedná se o datum konání akce, ne datum publikování akce.
+        type: datepicker
+        span: left
+        required: true
+        validation: required
+        column:
+            type: date
+        scope:
+            type: date
+
+    highlighted:
+        label: Zobrazit jako hlavní akci
+        type: switch
+        comment: "POZOR! Pokud bude více akcí takto označeno, bude se zobrazovat jen akce s nejbližším datem konáné."
+        span: right
+        default: false
+
+    excerpt:
+        label: Perex
+        commentAbove: Krátký popis, který bude zobrazen ve výpisu akcí.
+        type: textarea
+        span: left
+        size: small
+        column: false
+        scope: false
+
+    content:
+        label: Obsah
+        commentAbove: Text akce, který bude zobrazen ve stránce s detailem akce.
+        type: richeditor
+        required: true
+        validation: required
+        column: false
+        scope: false
+
+    main_image:
+        label: Titulní obrázek
+        commentAbove: Obrázek, který bude zobrazen ve výpisu akcí.
+        span: left
+        type: fileupload
+        maxFiles: 1
+        column: false
+        scope: false
+
+    images:
+        label: Obrázky
+        commentAbove: Obrázky, které budou zobrazeny ve stránce s detailem akce.
+        span: right
+        type: fileupload
+        maxFiles: 2
+        column: false
+        scope: false
