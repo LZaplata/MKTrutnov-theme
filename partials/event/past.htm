@@ -4,7 +4,7 @@
             {% if event.main_image %}
                 <img src="{{ event.main_image.thumb(420, 205, {"mode": "crop"}) }}" alt="{{ image.description }}" class="img-fluid">
             {% else %}
-                <img src="{{ 'assets/images/thumbs/0%s.jpg'|format(random(1, 9))|theme }}" alt="Titulní obrázek" class="img-fluid">
+                <img src="{{ 'assets/images/thumbs/0%s-sm.jpg'|format(random(1, 9))|theme }}" alt="Titulní obrázek" class="img-fluid">
             {% endif %}
         </p>
 
