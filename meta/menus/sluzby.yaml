@@ -91,7 +91,7 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: 'Díla nedostopná na trhu'
+        title: 'Díla nedostupná na trhu'
         nesting: 0
         type: static-page
         code: ''
