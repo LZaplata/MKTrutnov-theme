@@ -91,13 +91,11 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: 'Česká digitální knihovna'
+        title: 'Díla nedostopná na trhu'
         nesting: 0
         type: static-page
-        url: null
         code: ''
-        reference: sluzby-ceska-digitalni-knihovna
-        cmsPage: null
+        reference: sluzby-dokumenty-nedostopne-na-trhu
         replace: 0
         viewBag:
             isHidden: '0'
