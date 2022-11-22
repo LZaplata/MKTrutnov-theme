@@ -6,6 +6,8 @@ window.lightGallery = lightGallery;
 window.lgThumbnail = lgThumbnail;
 window.lgZoom = lgThumbnail;
 
+window.$ = window.jQuery = require("jquery");
+
 lightGallery(document.getElementById("event-galleryy"), {
     plugins: [lgZoom, lgThumbnail],
     speed: 500,
