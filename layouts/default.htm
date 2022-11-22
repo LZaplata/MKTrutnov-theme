@@ -2,6 +2,8 @@
 code = "main-menu"
 
 [seo]
+
+[cookiesBar cookiesbar]
 ==
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -19,6 +21,8 @@ code = "main-menu"
             'assets/css/lg-zoom.css',
             'assets/css/lg-thumbnail.css',
         ]|theme }}" />
+
+        {% styles %}
     </head>
 
     <body class="d-flex flex-column h-100">
@@ -29,6 +33,7 @@ code = "main-menu"
         </main>
 
         {% partial "footer" %}
+        {% component "cookiesbar" %}
 
         <script src="{{ [
             'assets/js/jquery.min.js',
@@ -40,6 +45,7 @@ code = "main-menu"
             'assets/js/theme.js',
         ]|theme }}"></script>
 
+        {% scripts %}
         {% framework extras %}
     </body>
 </html>

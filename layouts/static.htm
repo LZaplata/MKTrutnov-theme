@@ -13,6 +13,8 @@ code = "regionalni-sluzby"
 [childPages]
 
 [Files files]
+
+[cookiesBar cookiesbar]
 ==
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -30,6 +32,8 @@ code = "regionalni-sluzby"
             'assets/css/lg-zoom.css',
             'assets/css/lg-thumbnail.css',
         ]|theme }}" />
+
+        {% styles %}
     </head>
 
     <body class="d-flex flex-column h-100">
@@ -60,6 +64,7 @@ code = "regionalni-sluzby"
         </main>
 
         {% partial "footer" %}
+        {% component "cookiesbar" %}
 
         <script src="{{ [
             'assets/js/jquery.min.js',
@@ -70,5 +75,8 @@ code = "regionalni-sluzby"
             'assets/js/lg-thumbnail.min.js',
             'assets/js/theme.js',
         ]|theme }}"></script>
+
+        {% scripts %}
+        {% framework extras %}
     </body>
 </html>
