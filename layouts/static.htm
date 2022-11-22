@@ -34,6 +34,18 @@ code = "regionalni-sluzby"
         ]|theme }}" />
 
         {% styles %}
+
+        {% if sgCookies.analytics %}
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRZS565CDH"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-VRZS565CDH');
+            </script>
+        {% endif %}
     </head>
 
     <body class="d-flex flex-column h-100">
